@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --Red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 86%, 64%);
+  --Very-Dark-Blue: hsl(234, 12%, 34%);
+  --Grayish-Blue: hsl(229, 6%, 66%);
+  --Very-Light-Gray: hsl(0, 0%, 98%);
+}
+
+body {
+  background: var(--Very-Light-Gray);
+  padding: 2rem 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* color class */
+* .drk-blu {
+  color: var(--Very-Dark-Blue);
+}
+* .gry-blu {
+  color: var(--Grayish-Blue);
+}
+
+/* header section */
+.heading {
+  width: 30rem;
+  text-align: center;
+}
+.heading .h1-light {
+  font-weight: 200;
+}
+.heading .h1-bold {
+  font-weight: 600;
+}
+
+.heading p {
+  margin-top: 1rem;
+  font-weight: 400;
+}
+
+/* main section */
+main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  width: 80%;
+  height: 31rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.card .inner-card {
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem hsla(227, 22%, 64%, 0.5);
+  padding: 1rem 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card .inner-card p {
+  font-size: 0.8rem;
+}
+.card .inner-card img {
+  width: 50px;
+  margin-left: auto;
+}
+
+.card .one {
+  border-top: 5px solid var(--Cyan);
+  grid-area: 2/1/4/2;
+}
+.card .two {
+  border-top: 5px solid var(--Red);
+  grid-area: 1/2/3/3;
+}
+.card .three {
+  border-top: 5px solid var(--Blue);
+  grid-area: 2/3/4/4;
+}
+.card .four {
+  border-top: 5px solid var(--Orange);
+  grid-area: 3/2/5/3;
+}
